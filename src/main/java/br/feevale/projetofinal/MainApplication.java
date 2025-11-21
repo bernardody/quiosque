@@ -1,5 +1,6 @@
 package br.feevale.projetofinal;
 
+import br.feevale.projetofinal.controller.PersistenciaController;
 import br.feevale.projetofinal.model.*;
 import br.feevale.projetofinal.model.cardapio.*;
 import javafx.application.Application;
@@ -14,6 +15,11 @@ public class MainApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        estabelecimento = PersistenciaController.carregar();
+        if (estabelecimento == null) {
+            inicializarSistema();
+        }
+
         inicializarSistema();
 
         var url = getClass().getResource("/br/feevale/projetofinal/view/tela-inicial.fxml");

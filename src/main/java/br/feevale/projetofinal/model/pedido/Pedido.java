@@ -2,14 +2,13 @@ package br.feevale.projetofinal.model.pedido;
 
 import br.feevale.projetofinal.model.cardapio.ItemCardapio;
 import br.feevale.projetofinal.model.pagamento.FormaPagamento;
-import br.feevale.projetofinal.model.pedido.ItemPedido;
-import br.feevale.projetofinal.model.pedido.StatusPedido;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pedido {
+public class Pedido implements Serializable {
     private static int contadorNumero = 1;
 
     private int numero;
@@ -63,6 +62,7 @@ public class Pedido {
             case PAGO: status = StatusPedido.EM_PREPARO; break;
             case EM_PREPARO: status = StatusPedido.PRONTO; break;
             case PRONTO: status = StatusPedido.ENTREGUE; break;
+            case ENTREGUE: status = StatusPedido.ENTREGUE; break;
         }
     }
 

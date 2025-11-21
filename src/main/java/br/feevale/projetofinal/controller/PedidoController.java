@@ -1,5 +1,6 @@
 package br.feevale.projetofinal.controller;
 
+import br.feevale.projetofinal.MainApplication;
 import br.feevale.projetofinal.model.*;
 import br.feevale.projetofinal.model.cardapio.ItemCardapio;
 import br.feevale.projetofinal.model.pagamento.FormaPagamento;
@@ -44,6 +45,9 @@ public class PedidoController {
     public boolean finalizarPedido(FormaPagamento pagamento) {
         if (pedidoAtual.processarPagamento(pagamento)) {
             estabelecimento.registrarPedido(pedidoAtual);
+
+            PersistenciaController.salvar(MainApplication.getEstabelecimento());
+
             pedidoAtual = null;
             return true;
         }

@@ -1,6 +1,8 @@
 package br.feevale.projetofinal.model.pagamento;
 
-public class PagamentoCartao implements FormaPagamento {
+import java.io.Serializable;
+
+public class PagamentoCartao implements FormaPagamento, Serializable {
     private String tipo;
 
     public PagamentoCartao(String tipo) {

@@ -4,11 +4,12 @@ import br.feevale.projetofinal.model.cardapio.ItemCardapio;
 import br.feevale.projetofinal.model.pedido.Pedido;
 import br.feevale.projetofinal.model.pedido.StatusPedido;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Estabelecimento {
+public class Estabelecimento implements Serializable {
     private String nome;
     private List<ItemCardapio> cardapio;
     private List<Pedido> pedidos;

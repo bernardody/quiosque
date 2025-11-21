@@ -1,6 +1,7 @@
 module br.feevale.projetofinal {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.graphics;
 
 
     opens br.feevale.projetofinal to javafx.fxml;

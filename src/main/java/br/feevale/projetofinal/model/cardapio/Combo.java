@@ -1,7 +1,5 @@
 package br.feevale.projetofinal.model.cardapio;
 
-import br.feevale.projetofinal.model.cardapio.ItemCardapio;
-
 import java.util.ArrayList;
 import java.util.List;
 

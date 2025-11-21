@@ -1,6 +1,8 @@
 package br.feevale.projetofinal.model.cardapio;
 
-public abstract class ItemCardapio {
+import java.io.Serializable;
+
+public abstract class ItemCardapio implements Serializable {
     private String codigo;
     private String nome;
     private String descricao;

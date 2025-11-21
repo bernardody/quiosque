@@ -1,6 +1,8 @@
 package br.feevale.projetofinal.model.pagamento;
 
-public class PagamentoDinheiro implements FormaPagamento {
+import java.io.Serializable;
+
+public class PagamentoDinheiro implements FormaPagamento, Serializable {
 
     @Override
     public boolean processar(double valor) {
