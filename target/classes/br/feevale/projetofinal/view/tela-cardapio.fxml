@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.feevale.projetofinal.view.TelaCardapioController"
+            prefHeight="700.0" prefWidth="500.0"
+            style="-fx-background-color: #DC143C;">
+
+    <!-- TOPO: Título -->
+    <top>
+        <VBox style="-fx-background-color: #8B0000; -fx-padding: 15;" spacing="10.0">
+            <Label text="CARDÁPIO" textFill="#FFD700">
+                <font>
+                    <Font name="System Bold" size="28.0" />
+                </font>
+            </Label>
+
+            <!-- Filtros de Categoria -->
+            <ScrollPane fitToHeight="true" style="-fx-background-color: transparent;">
+                <HBox spacing="8.0">
+                    <Button fx:id="btnTodos" text="Todos" onAction="#onFiltrarTodos"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #8B0000; -fx-font-weight: bold;"
+                            prefWidth="70.0" />
+                    <Button fx:id="btnLanches" text="Lanches" onAction="#onFiltrarLanches"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #8B0000;"
+                            prefWidth="70.0" />
+                    <Button fx:id="btnBebidas" text="Bebidas" onAction="#onFiltrarBebidas"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #8B0000;"
+                            prefWidth="70.0" />
+                    <Button fx:id="btnAcompanhamentos" text="Acomp." onAction="#onFiltrarAcompanhamentos"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #8B0000;"
+                            prefWidth="70.0" />
+                    <Button fx:id="btnSobremesas" text="Sobrem." onAction="#onFiltrarSobremesas"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #8B0000;"
+                            prefWidth="70.0" />
+                    <Button fx:id="btnCombos" text="Combos" onAction="#onFiltrarCombos"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #8B0000;"
+                            prefWidth="70.0" />
+                </HBox>
+            </ScrollPane>
+        </VBox>
+    </top>
+
+    <!-- CENTRO: Produtos e Carrinho -->
+    <center>
+        <HBox>
+            <!-- Produtos -->
+            <ScrollPane fitToWidth="true" HBox.hgrow="ALWAYS"
+                        style="-fx-background: #DC143C; -fx-background-color: #DC143C;">
+                <VBox fx:id="containerProdutos" spacing="10.0" style="-fx-padding: 10;" />
+            </ScrollPane>
+
+            <!-- Carrinho -->
+            <VBox spacing="10.0" style="-fx-background-color: #000000; -fx-padding: 10;"
+                  prefWidth="200.0">
+
+                <Label text="SEU PEDIDO" textFill="#FFD700">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+
+                <Separator style="-fx-background-color: #FFD700;" />
+
+                <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS"
+                            style="-fx-background: transparent; -fx-background-color: transparent;">
+                    <VBox fx:id="containerCarrinho" spacing="8.0" />
+                </ScrollPane>
+
+                <Separator style="-fx-background-color: #FFD700;" />
+
+                <Label fx:id="lblTotal" text="R$ 0,00" textFill="#FFD700">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+
+                <Button fx:id="btnFinalizarPedido" text="FINALIZAR"
+                        onAction="#onFinalizarPedido"
+                        style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-weight: bold;"
+                        prefWidth="180.0" prefHeight="40.0" />
+
+                <Button fx:id="btnVoltar" text="Voltar"
+                        onAction="#onVoltar"
+                        style="-fx-background-color: #8B0000; -fx-text-fill: #FFD700;"
+                        prefWidth="180.0" />
+            </VBox>
+        </HBox>
+    </center>
+
+</BorderPane>
