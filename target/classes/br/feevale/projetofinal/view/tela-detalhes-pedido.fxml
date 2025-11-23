@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.feevale.projetofinal.view.TelaDetalhesPedidoController"
+            prefHeight="700.0" prefWidth="500.0"
+            style="-fx-background-color: white;">
+
+    <!-- TOPO -->
+    <top>
+        <VBox style="-fx-background-color: #DC143C; -fx-padding: 20;">
+            <Label text="DETALHES DO PEDIDO" textFill="#FFD700">
+                <font>
+                    <Font name="System Bold" size="28.0" />
+                </font>
+            </Label>
+            <Label fx:id="lblNumeroPedido" text="Pedido #000" textFill="#FFD700">
+                <font>
+                    <Font size="16.0" />
+                </font>
+                <VBox.margin>
+                    <Insets top="5.0" />
+                </VBox.margin>
+            </Label>
+        </VBox>
+    </top>
+
+    <!-- CENTRO -->
+    <center>
+        <VBox spacing="15.0" style="-fx-background-color: white; -fx-padding: 20;">
+
+            <!-- Status Atual -->
+            <VBox spacing="5.0">
+                <Label text="Status Atual:" style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #DC143C;" />
+                <Label fx:id="lblStatus" text="PAGO" style="-fx-font-size: 20; -fx-text-fill: #28a745; -fx-font-weight: bold;" />
+            </VBox>
+
+            <Separator style="-fx-background-color: #DC143C;" />
+
+            <!-- Itens -->
+            <VBox spacing="5.0">
+                <Label text="Itens:" style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #DC143C;" />
+                <ScrollPane fitToWidth="true" prefHeight="250.0" style="-fx-background: transparent;">
+                    <VBox fx:id="containerItens" spacing="8.0" />
+                </ScrollPane>
+            </VBox>
+
+            <Separator style="-fx-background-color: #DC143C;" />
+
+            <!-- Total e Pagamento -->
+            <VBox spacing="5.0">
+                <Label fx:id="lblTotal" text="Total: R$ 0,00" style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #DC143C;" />
+                <Label fx:id="lblFormaPagamento" text="Pagamento: ..." style="-fx-font-size: 14; -fx-text-fill: #8B0000;" />
+            </VBox>
+        </VBox>
+    </center>
+
+    <!-- RODAPÉ -->
+    <bottom>
+        <VBox spacing="10.0" style="-fx-background-color: #DC143C; -fx-padding: 15;">
+            <Button fx:id="btnAvancarStatus" text="AVANÇAR STATUS"
+                    onAction="#onAvancarStatus"
+                    style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-size: 16; -fx-font-weight: bold;"
+                    prefWidth="460.0" prefHeight="50.0" />
+
+            <Button fx:id="btnVoltar" text="Voltar"
+                    onAction="#onVoltar"
+                    style="-fx-background-color: #8B0000; -fx-text-fill: #FFD700; -fx-font-size: 14;"
+                    prefWidth="460.0" prefHeight="40.0" />
+        </VBox>
+    </bottom>
+
+</BorderPane>
