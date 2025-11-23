@@ -14,17 +14,25 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
 public class TelaDetalhesPedidoController {
 
-    @FXML private Label lblNumeroPedido;
-    @FXML private Label lblStatus;
-    @FXML private VBox containerItens;
-    @FXML private Label lblTotal;
-    @FXML private Label lblFormaPagamento;
-    @FXML private Button btnAvancarStatus;
-    @FXML private Button btnVoltar;
+    @FXML
+    private Label lblNumeroPedido;
+    @FXML
+    private Label lblStatus;
+    @FXML
+    private VBox containerItens;
+    @FXML
+    private Label lblTotal;
+    @FXML
+    private Label lblFormaPagamento;
+    @FXML
+    private Button btnAvancarStatus;
+    @FXML
+    private Button btnVoltar;
 
     private Pedido pedido;
     private GerenciamentoController gerenciamentoController;

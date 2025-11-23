@@ -17,22 +17,34 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.util.List;
 
 public class TelaCardapioController {
 
-    @FXML private VBox containerProdutos;
-    @FXML private VBox containerCarrinho;
-    @FXML private Label lblTotal;
-    @FXML private Button btnFinalizarPedido;
-    @FXML private Button btnVoltar;
-    @FXML private Button btnTodos;
-    @FXML private Button btnLanches;
-    @FXML private Button btnBebidas;
-    @FXML private Button btnAcompanhamentos;
-    @FXML private Button btnSobremesas;
-    @FXML private Button btnCombos;
+    @FXML
+    private VBox containerProdutos;
+    @FXML
+    private VBox containerCarrinho;
+    @FXML
+    private Label lblTotal;
+    @FXML
+    private Button btnFinalizarPedido;
+    @FXML
+    private Button btnVoltar;
+    @FXML
+    private Button btnTodos;
+    @FXML
+    private Button btnLanches;
+    @FXML
+    private Button btnBebidas;
+    @FXML
+    private Button btnAcompanhamentos;
+    @FXML
+    private Button btnSobremesas;
+    @FXML
+    private Button btnCombos;
 
     private CardapioController cardapioController;
     private PedidoController pedidoController;
@@ -161,12 +173,24 @@ public class TelaCardapioController {
     private void destacarBotaoAtivo(String categoria) {
         String estiloAtivo = "-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;";
         switch (categoria) {
-            case "Todos": btnTodos.setStyle(estiloAtivo); break;
-            case "Lanche": btnLanches.setStyle(estiloAtivo); break;
-            case "Bebida": btnBebidas.setStyle(estiloAtivo); break;
-            case "Acompanhamento": btnAcompanhamentos.setStyle(estiloAtivo); break;
-            case "Sobremesa": btnSobremesas.setStyle(estiloAtivo); break;
-            case "Combo": btnCombos.setStyle(estiloAtivo); break;
+            case "Todos":
+                btnTodos.setStyle(estiloAtivo);
+                break;
+            case "Lanche":
+                btnLanches.setStyle(estiloAtivo);
+                break;
+            case "Bebida":
+                btnBebidas.setStyle(estiloAtivo);
+                break;
+            case "Acompanhamento":
+                btnAcompanhamentos.setStyle(estiloAtivo);
+                break;
+            case "Sobremesa":
+                btnSobremesas.setStyle(estiloAtivo);
+                break;
+            case "Combo":
+                btnCombos.setStyle(estiloAtivo);
+                break;
         }
     }
 

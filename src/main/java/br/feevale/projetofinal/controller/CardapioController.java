@@ -1,12 +1,12 @@
 package br.feevale.projetofinal.controller;
 
-import br.feevale.projetofinal.model.*;
+import br.feevale.projetofinal.model.Estabelecimento;
 import br.feevale.projetofinal.model.cardapio.ItemCardapio;
 
 import java.util.List;
 
 public class CardapioController {
-    private Estabelecimento estabelecimento;
+    private final Estabelecimento estabelecimento;
 
     public CardapioController(Estabelecimento estabelecimento) {
         this.estabelecimento = estabelecimento;

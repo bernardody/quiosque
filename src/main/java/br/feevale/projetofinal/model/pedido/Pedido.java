@@ -11,9 +11,9 @@ import java.util.List;
 public class Pedido implements Serializable {
     private static int contadorNumero = 1;
 
-    private int numero;
-    private LocalDateTime dataHora;
-    private List<ItemPedido> itens;
+    private final int numero;
+    private final LocalDateTime dataHora;
+    private final List<ItemPedido> itens;
     private StatusPedido status;
     private FormaPagamento formaPagamento;
 
@@ -58,11 +58,21 @@ public class Pedido implements Serializable {
 
     public void avancarStatus() {
         switch (status) {
-            case AGUARDANDO_PAGAMENTO: status = StatusPedido.PAGO; break;
-            case PAGO: status = StatusPedido.EM_PREPARO; break;
-            case EM_PREPARO: status = StatusPedido.PRONTO; break;
-            case PRONTO: status = StatusPedido.ENTREGUE; break;
-            case ENTREGUE: status = StatusPedido.ENTREGUE; break;
+            case AGUARDANDO_PAGAMENTO:
+                status = StatusPedido.PAGO;
+                break;
+            case PAGO:
+                status = StatusPedido.EM_PREPARO;
+                break;
+            case EM_PREPARO:
+                status = StatusPedido.PRONTO;
+                break;
+            case PRONTO:
+                status = StatusPedido.ENTREGUE;
+                break;
+            case ENTREGUE:
+                status = StatusPedido.ENTREGUE;
+                break;
         }
     }
 

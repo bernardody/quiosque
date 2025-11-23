@@ -3,10 +3,10 @@ package br.feevale.projetofinal.model.cardapio;
 import java.io.Serializable;
 
 public abstract class ItemCardapio implements Serializable {
-    private String codigo;
-    private String nome;
-    private String descricao;
-    private double preco;
+    private final String codigo;
+    private final String nome;
+    private final String descricao;
+    private final double preco;
     private boolean disponivel;
 
     public ItemCardapio(String codigo, String nome, String descricao, double preco) {

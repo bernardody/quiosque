@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Estabelecimento implements Serializable {
-    private String nome;
-    private List<ItemCardapio> cardapio;
-    private List<Pedido> pedidos;
+    private final String nome;
+    private final List<ItemCardapio> cardapio;
+    private final List<Pedido> pedidos;
 
     public Estabelecimento(String nome) {
         this.nome = nome;

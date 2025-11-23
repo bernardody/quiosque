@@ -3,7 +3,7 @@ package br.feevale.projetofinal.model.pagamento;
 import java.io.Serializable;
 
 public class PagamentoCartao implements FormaPagamento, Serializable {
-    private String tipo;
+    private final String tipo;
 
     public PagamentoCartao(String tipo) {
         this.tipo = tipo;

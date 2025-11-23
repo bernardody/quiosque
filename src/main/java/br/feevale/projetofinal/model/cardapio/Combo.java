@@ -1,13 +1,11 @@
 package br.feevale.projetofinal.model.cardapio;
 
-import br.feevale.projetofinal.model.cardapio.ItemCardapio;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Combo extends ItemCardapio {
-    private List<ItemCardapio> itens;
-    private double percentualDesconto;
+    private final List<ItemCardapio> itens;
+    private final double percentualDesconto;
 
     public Combo(String codigo, String nome, String descricao, double percentualDesconto) {
         super(codigo, nome, descricao, 0.0);

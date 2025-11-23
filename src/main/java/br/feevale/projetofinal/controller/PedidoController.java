@@ -1,6 +1,6 @@
 package br.feevale.projetofinal.controller;
 
-import br.feevale.projetofinal.model.*;
+import br.feevale.projetofinal.model.Estabelecimento;
 import br.feevale.projetofinal.model.cardapio.ItemCardapio;
 import br.feevale.projetofinal.model.pagamento.FormaPagamento;
 import br.feevale.projetofinal.model.pedido.ItemPedido;
@@ -9,7 +9,7 @@ import br.feevale.projetofinal.model.pedido.Pedido;
 import java.util.List;
 
 public class PedidoController {
-    private Estabelecimento estabelecimento;
+    private final Estabelecimento estabelecimento;
     private Pedido pedidoAtual;
 
     public PedidoController(Estabelecimento estabelecimento) {

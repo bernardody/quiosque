@@ -16,19 +16,27 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class TelaGerenciamentoController {
 
-    @FXML private VBox containerPedidos;
-    @FXML private Button btnTodos;
-    @FXML private Button btnPagos;
-    @FXML private Button btnEmPreparo;
-    @FXML private Button btnProntos;
-    @FXML private Button btnEntregues;
-    @FXML private Button btnVoltar;
+    @FXML
+    private VBox containerPedidos;
+    @FXML
+    private Button btnTodos;
+    @FXML
+    private Button btnPagos;
+    @FXML
+    private Button btnEmPreparo;
+    @FXML
+    private Button btnProntos;
+    @FXML
+    private Button btnEntregues;
+    @FXML
+    private Button btnVoltar;
 
     private GerenciamentoController gerenciamentoController;
 
@@ -131,10 +139,18 @@ public class TelaGerenciamentoController {
 
     private void destacarBotaoPorStatus(StatusPedido status) {
         switch (status) {
-            case PAGO: destacarBotao(btnPagos); break;
-            case EM_PREPARO: destacarBotao(btnEmPreparo); break;
-            case PRONTO: destacarBotao(btnProntos); break;
-            case ENTREGUE: destacarBotao(btnEntregues); break;
+            case PAGO:
+                destacarBotao(btnPagos);
+                break;
+            case EM_PREPARO:
+                destacarBotao(btnEmPreparo);
+                break;
+            case PRONTO:
+                destacarBotao(btnProntos);
+                break;
+            case ENTREGUE:
+                destacarBotao(btnEntregues);
+                break;
         }
     }
 

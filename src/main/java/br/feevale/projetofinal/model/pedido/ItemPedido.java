@@ -1,11 +1,11 @@
 package br.feevale.projetofinal.model.pedido;
 
-import java.io.Serializable;
-
 import br.feevale.projetofinal.model.cardapio.ItemCardapio;
 
+import java.io.Serializable;
+
 public class ItemPedido implements Serializable {
-    private ItemCardapio item;
+    private final ItemCardapio item;
     private int quantidade;
 
     public ItemPedido(ItemCardapio item, int quantidade) {

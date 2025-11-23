@@ -1,7 +1,7 @@
 package br.feevale.projetofinal;
 
 import br.feevale.projetofinal.controller.PersistenciaController;
-import br.feevale.projetofinal.model.*;
+import br.feevale.projetofinal.model.Estabelecimento;
 import br.feevale.projetofinal.model.cardapio.*;
 import br.feevale.projetofinal.model.pedido.Pedido;
 import javafx.application.Application;
@@ -9,11 +9,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 import java.util.List;
 
 public class MainApplication extends Application {
 
     private static Estabelecimento estabelecimento;
+
+    public static Estabelecimento getEstabelecimento() {
+        return estabelecimento;
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -98,13 +107,5 @@ public class MainApplication extends Application {
         for (Pedido pedido : pedidosSalvos) {
             estabelecimento.registrarPedido(pedido);
         }
-    }
-
-    public static Estabelecimento getEstabelecimento() {
-        return estabelecimento;
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
