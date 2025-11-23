@@ -20,22 +20,22 @@
             </Label>
 
             <!-- Filtros por Status -->
-            <ScrollPane fitToHeight="true" style="-fx-background-color: transparent;">
-                <HBox spacing="8.0">
+            <ScrollPane fitToHeight="true" style="-fx-background-color: #DC143C; -fx-background: #DC143C;">
+                <HBox spacing="8.0" style="-fx-background-color: #DC143C;">
                     <Button fx:id="btnTodos" text="Todos" onAction="#onFiltrarTodos"
                             style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
                     <Button fx:id="btnPagos" text="Pagos" onAction="#onFiltrarPagos"
-                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C;"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
                     <Button fx:id="btnEmPreparo" text="Preparo" onAction="#onFiltrarEmPreparo"
-                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C;"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
                     <Button fx:id="btnProntos" text="Prontos" onAction="#onFiltrarProntos"
-                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C;"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
                     <Button fx:id="btnEntregues" text="Entreg." onAction="#onFiltrarEntregues"
-                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C;"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
                 </HBox>
             </ScrollPane>

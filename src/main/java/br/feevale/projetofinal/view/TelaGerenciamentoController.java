@@ -117,7 +117,7 @@ public class TelaGerenciamentoController {
     }
 
     private void resetarEstiloBotoes() {
-        String estiloInativo = "-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: normal;";
+        String estiloInativo = "-fx-background-color: #FFD700; -fx-text-fill: #DC143C;";
         btnTodos.setStyle(estiloInativo);
         btnPagos.setStyle(estiloInativo);
         btnEmPreparo.setStyle(estiloInativo);
@@ -126,7 +126,7 @@ public class TelaGerenciamentoController {
     }
 
     private void destacarBotao(Button botao) {
-        botao.setStyle("-fx-background-color: #8B0000; -fx-text-fill: #FFD700; -fx-font-weight: bold;");
+        botao.setStyle("-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;");
     }
 
     private void destacarBotaoPorStatus(StatusPedido status) {

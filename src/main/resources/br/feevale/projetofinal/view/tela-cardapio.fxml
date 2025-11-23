@@ -5,86 +5,86 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" 
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="br.feevale.projetofinal.view.TelaCardapioController"
             prefHeight="700.0" prefWidth="500.0"
             style="-fx-background-color: #DC143C;">
-    
+
     <top>
         <VBox style="-fx-background-color: #DC143C; -fx-padding: 15;" spacing="10.0">
-            <Label text="CARDÁPIO" textFill="#FFD700">
+            <Label text="CARDÃPIO" textFill="#FFD700">
                 <font>
                     <Font name="System Bold" size="28.0" />
                 </font>
             </Label>
-            
-            <ScrollPane fitToHeight="true" style="-fx-background-color: transparent;">
-                <HBox spacing="8.0">
-                    <Button fx:id="btnTodos" text="Todos" onAction="#onFiltrarTodos" 
-                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;" 
+
+            <ScrollPane fitToHeight="true" style="-fx-background-color: #DC143C; -fx-background: #DC143C;">
+                <HBox spacing="8.0" style="-fx-background-color: #DC143C;">
+                    <Button fx:id="btnTodos" text="Todos" onAction="#onFiltrarTodos"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
-                    <Button fx:id="btnLanches" text="Lanches" onAction="#onFiltrarLanches" 
-                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C;" 
+                    <Button fx:id="btnLanches" text="Lanches" onAction="#onFiltrarLanches"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
-                    <Button fx:id="btnBebidas" text="Bebidas" onAction="#onFiltrarBebidas" 
-                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C;" 
+                    <Button fx:id="btnBebidas" text="Bebidas" onAction="#onFiltrarBebidas"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
-                    <Button fx:id="btnAcompanhamentos" text="Acomp." onAction="#onFiltrarAcompanhamentos" 
-                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C;" 
+                    <Button fx:id="btnAcompanhamentos" text="Acomp." onAction="#onFiltrarAcompanhamentos"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
-                    <Button fx:id="btnSobremesas" text="Sobrem." onAction="#onFiltrarSobremesas" 
-                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C;" 
+                    <Button fx:id="btnSobremesas" text="Sobrem." onAction="#onFiltrarSobremesas"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
-                    <Button fx:id="btnCombos" text="Combos" onAction="#onFiltrarCombos" 
-                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C;" 
+                    <Button fx:id="btnCombos" text="Combos" onAction="#onFiltrarCombos"
+                            style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
                             prefWidth="70.0" />
                 </HBox>
             </ScrollPane>
         </VBox>
     </top>
-    
+
     <center>
         <HBox>
-            <ScrollPane fitToWidth="true" HBox.hgrow="ALWAYS" 
+            <ScrollPane fitToWidth="true" HBox.hgrow="ALWAYS"
                         style="-fx-background: white; -fx-background-color: white;">
                 <VBox fx:id="containerProdutos" spacing="10.0" style="-fx-padding: 10; -fx-background-color: white;" />
             </ScrollPane>
-            
-            <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 10;" 
+
+            <VBox spacing="10.0" style="-fx-background-color: white; -fx-padding: 10;"
                   prefWidth="200.0">
-                
+
                 <Label text="SEU PEDIDO" textFill="#DC143C">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Label>
-                
+
                 <Separator style="-fx-background-color: #DC143C;" />
-                
-                <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" 
+
+                <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS"
                             style="-fx-background: transparent; -fx-background-color: transparent;">
                     <VBox fx:id="containerCarrinho" spacing="8.0" />
                 </ScrollPane>
-                
+
                 <Separator style="-fx-background-color: #DC143C;" />
-                
+
                 <Label fx:id="lblTotal" text="R$ 0,00" textFill="#DC143C">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Label>
-                
-                <Button fx:id="btnFinalizarPedido" text="FINALIZAR" 
+
+                <Button fx:id="btnFinalizarPedido" text="FINALIZAR"
                         onAction="#onFinalizarPedido"
                         style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold;"
                         prefWidth="180.0" prefHeight="40.0" />
-                
-                <Button fx:id="btnVoltar" text="Voltar" 
+
+                <Button fx:id="btnVoltar" text="Voltar"
                         onAction="#onVoltar"
                         style="-fx-background-color: #DC143C; -fx-text-fill: white;"
                         prefWidth="180.0" />
             </VBox>
         </HBox>
     </center>
-    
+
 </BorderPane>
