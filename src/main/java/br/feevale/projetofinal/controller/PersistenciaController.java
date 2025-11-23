@@ -1,29 +1,32 @@
 package br.feevale.projetofinal.controller;
 
-import br.feevale.projetofinal.model.Estabelecimento;
+import br.feevale.projetofinal.model.pedido.Pedido;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PersistenciaController {
-    
-    private static final String ARQUIVO = "estabelecimento.dat";
-    
-    public static void salvar(Estabelecimento estabelecimento) {
+
+    private static final String ARQUIVO = "pedidos.dat";
+
+    public static void salvarPedidos(List<Pedido> pedidos) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ARQUIVO))) {
-            oos.writeObject(estabelecimento);
+            oos.writeObject(pedidos);
         } catch (IOException e) {
-            System.err.println("Erro ao salvar: " + e.getMessage());
+            System.err.println("Erro ao salvar pedidos: " + e.getMessage());
         }
     }
-    
-    public static Estabelecimento carregar() {
+
+    @SuppressWarnings("unchecked")
+    public static List<Pedido> carregarPedidos() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ARQUIVO))) {
-            return (Estabelecimento) ois.readObject();
+            return (List<Pedido>) ois.readObject();
         } catch (FileNotFoundException e) {
-            System.out.println("Arquivo não encontrado, criando novo estabelecimento.");
-            return null;
+            System.out.println("Arquivo de pedidos não encontrado, iniciando lista vazia.");
+            return new ArrayList<>();
         } catch (IOException | ClassNotFoundException e) {
-            System.err.println("Erro ao carregar: " + e.getMessage());
-            return null;
+            System.err.println("Erro ao carregar pedidos: " + e.getMessage());
+            return new ArrayList<>();
         }
     }
 }

@@ -25,6 +25,7 @@ public class GerenciamentoController {
         Pedido pedido = estabelecimento.buscarPedidoPorNumero(numeroPedido);
         if (pedido != null) {
             pedido.avancarStatus();
+            PersistenciaController.salvarPedidos(estabelecimento.getTodosPedidos());
         }
     }
 }

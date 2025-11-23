@@ -3,11 +3,13 @@ package br.feevale.projetofinal;
 import br.feevale.projetofinal.controller.PersistenciaController;
 import br.feevale.projetofinal.model.*;
 import br.feevale.projetofinal.model.cardapio.*;
+import br.feevale.projetofinal.model.pedido.Pedido;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.util.List;
 
 public class MainApplication extends Application {
 
@@ -15,12 +17,8 @@ public class MainApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        estabelecimento = PersistenciaController.carregar();
-        if (estabelecimento == null) {
-            inicializarSistema();
-        }
-
         inicializarSistema();
+        carregarPedidos();
 
         var url = getClass().getResource("/br/feevale/projetofinal/view/tela-inicial.fxml");
 
@@ -93,6 +91,13 @@ public class MainApplication extends Application {
         combo2.adicionarItem(estabelecimento.buscarItemPorCodigo("A002"));
         combo2.adicionarItem(estabelecimento.buscarItemPorCodigo("B002"));
         estabelecimento.adicionarItemCardapio(combo2);
+    }
+
+    private void carregarPedidos() {
+        List<Pedido> pedidosSalvos = PersistenciaController.carregarPedidos();
+        for (Pedido pedido : pedidosSalvos) {
+            estabelecimento.registrarPedido(pedido);
+        }
     }
 
     public static Estabelecimento getEstabelecimento() {

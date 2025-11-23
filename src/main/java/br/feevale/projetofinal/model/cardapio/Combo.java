@@ -1,5 +1,7 @@
 package br.feevale.projetofinal.model.cardapio;
 
+import br.feevale.projetofinal.model.cardapio.ItemCardapio;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +24,11 @@ public class Combo extends ItemCardapio {
         if (!(item instanceof Combo)) {
             this.itens.add(item);
         }
+    }
+
+    @Override
+    public double getPreco() {
+        return calcularPreco();
     }
 
     @Override
