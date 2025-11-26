@@ -1,58 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
-<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" 
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.12"
       fx:controller="br.feevale.projetofinal.view.TelaConfirmacaoController"
       prefHeight="700.0" prefWidth="500.0"
       spacing="30.0"
       style="-fx-background-color: white;">
-    
+
     <Label text="✓" textFill="#28a745">
         <font>
-            <Font name="System Bold" size="100.0" />
+            <Font name="System Bold" size="100.0"/>
         </font>
     </Label>
-    
+
     <VBox alignment="CENTER" spacing="15.0">
-        <Label text="Pedido Realizado com Sucesso!" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #DC143C;">
+        <Label text="Pedido Realizado com Sucesso!"
+               style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #DC143C;">
             <VBox.margin>
-                <Insets bottom="10.0" />
+                <Insets bottom="10.0"/>
             </VBox.margin>
         </Label>
-        
+
         <Label fx:id="lblNumeroPedido" text="Número do Pedido: #000" style="-fx-font-size: 18; -fx-text-fill: #DC143C;">
             <VBox.margin>
-                <Insets bottom="5.0" />
+                <Insets bottom="5.0"/>
             </VBox.margin>
         </Label>
-        
-        <Label fx:id="lblFormaPagamento" text="Forma de Pagamento: ..." style="-fx-font-size: 16; -fx-text-fill: #8B0000;" />
-        
+
+        <Label fx:id="lblFormaPagamento" text="Forma de Pagamento: ..."
+               style="-fx-font-size: 16; -fx-text-fill: #8B0000;"/>
+
         <Label text="Status: PAGO" style="-fx-font-size: 16; -fx-text-fill: #28a745; -fx-font-weight: bold;">
             <VBox.margin>
-                <Insets top="10.0" />
+                <Insets top="10.0"/>
             </VBox.margin>
         </Label>
     </VBox>
-    
-    <Label text="Aguarde, seu pedido está sendo preparado!" 
+
+    <Label text="Aguarde, seu pedido está sendo preparado!"
            style="-fx-font-size: 14; -fx-text-fill: #DC143C; -fx-font-style: italic;"
-           wrapText="true" textAlignment="CENTER" />
-    
+           wrapText="true" textAlignment="CENTER"/>
+
     <VBox spacing="15.0" alignment="CENTER">
-        <Button fx:id="btnNovoPedido" text="FAZER NOVO PEDIDO" 
+        <Button fx:id="btnNovoPedido" text="FAZER NOVO PEDIDO"
                 onAction="#onNovoPedido"
                 style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-size: 16; -fx-font-weight: bold;"
-                prefWidth="300.0" prefHeight="50.0" />
-        
-        <Button fx:id="btnVoltar" text="Voltar para Início" 
+                prefWidth="300.0" prefHeight="50.0"/>
+
+        <Button fx:id="btnVoltar" text="Voltar para Início"
                 onAction="#onVoltar"
                 style="-fx-background-color: #DC143C; -fx-text-fill: #FFD700; -fx-font-size: 14;"
-                prefWidth="300.0" prefHeight="40.0" />
+                prefWidth="300.0" prefHeight="40.0"/>
     </VBox>
-    
+
 </VBox>

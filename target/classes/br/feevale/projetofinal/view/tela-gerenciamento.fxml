@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
-<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
             fx:controller="br.feevale.projetofinal.view.TelaGerenciamentoController"
             prefHeight="700.0" prefWidth="500.0"
             style="-fx-background-color: white;">
@@ -15,7 +13,7 @@
         <VBox style="-fx-background-color: #DC143C; -fx-padding: 15;" spacing="10.0">
             <Label text="GERENCIAMENTO DE PEDIDOS" textFill="#FFD700">
                 <font>
-                    <Font name="System Bold" size="24.0" />
+                    <Font name="System Bold" size="24.0"/>
                 </font>
             </Label>
 
@@ -24,19 +22,19 @@
                 <HBox spacing="8.0" style="-fx-background-color: #DC143C;">
                     <Button fx:id="btnTodos" text="Todos" onAction="#onFiltrarTodos"
                             style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
-                            prefWidth="70.0" />
+                            prefWidth="70.0"/>
                     <Button fx:id="btnPagos" text="Pagos" onAction="#onFiltrarPagos"
                             style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
-                            prefWidth="70.0" />
+                            prefWidth="70.0"/>
                     <Button fx:id="btnEmPreparo" text="Preparo" onAction="#onFiltrarEmPreparo"
                             style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
-                            prefWidth="70.0" />
+                            prefWidth="70.0"/>
                     <Button fx:id="btnProntos" text="Prontos" onAction="#onFiltrarProntos"
                             style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
-                            prefWidth="70.0" />
+                            prefWidth="70.0"/>
                     <Button fx:id="btnEntregues" text="Entreg." onAction="#onFiltrarEntregues"
                             style="-fx-background-color: #FFD700; -fx-text-fill: #DC143C; -fx-font-weight: bold;"
-                            prefWidth="70.0" />
+                            prefWidth="70.0"/>
                 </HBox>
             </ScrollPane>
         </VBox>
@@ -45,7 +43,7 @@
     <!-- CENTRO: Lista de pedidos -->
     <center>
         <ScrollPane fitToWidth="true" style="-fx-background: white; -fx-background-color: white;">
-            <VBox fx:id="containerPedidos" spacing="10.0" style="-fx-padding: 15; -fx-background-color: white;" />
+            <VBox fx:id="containerPedidos" spacing="10.0" style="-fx-padding: 15; -fx-background-color: white;"/>
         </ScrollPane>
     </center>
 
@@ -55,7 +53,7 @@
             <Button fx:id="btnVoltar" text="Voltar"
                     onAction="#onVoltar"
                     style="-fx-background-color: #8B0000; -fx-text-fill: #FFD700; -fx-font-size: 14;"
-                    prefWidth="200.0" prefHeight="40.0" />
+                    prefWidth="200.0" prefHeight="40.0"/>
         </HBox>
     </bottom>
 
