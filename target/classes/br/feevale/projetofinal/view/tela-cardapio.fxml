@@ -10,7 +10,7 @@
 
     <top>
         <VBox style="-fx-background-color: #DC143C; -fx-padding: 15;" spacing="10.0">
-            <Label text="CARDÃPIO" textFill="#FFD700">
+            <Label text="CARDÁPIO" textFill="#FFD700">
                 <font>
                     <Font name="System Bold" size="28.0"/>
                 </font>
