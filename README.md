@@ -94,3 +94,6 @@ O sistema possui duas áreas principais que devem ser testadas:
 **Cenário Combo**: Adicione um combo ao carrinho e verifique se o desconto de 15% foi aplicado corretamente.
 
 **Cenário Múltiplos Pedidos**: Crie 3-4 pedidos com diferentes status e teste os filtros no gerenciamento.
+
+### Link do GitHub
+- https://github.com/bernardody/quiosque
